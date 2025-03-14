@@ -15,5 +15,4 @@ This project focuses on classifying online comments as either positive or negati
 ⚠️ Automated content moderation  
 
 
-🔹 Tech Stack: Python, TensorFlow/PyTorch, NLP techniques  
-🔹 Next Steps: Model optimization, real-time deployment
+🔹 Tech Stack: Python, TensorFlow/PyTorch, NLP techniques, FastApi for Realtime Inferencing
