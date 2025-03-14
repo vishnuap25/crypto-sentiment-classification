@@ -4,7 +4,7 @@ This project focuses on classifying online comments as either positive or negati
 ## Key Features
 
 ✅ Preprocessed dataset with labeled sentiment (0 = Negative, 1 = Positive)  
-✅ Light weight deep learning approaches for faster inference 
+✅ Light weight deep learning approaches for faster inference  
 ✅ Fast API integration for Inferences  
 ✅ Streamlit UI for interactions
 
