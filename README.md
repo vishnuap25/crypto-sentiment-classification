@@ -4,9 +4,9 @@ This project focuses on classifying online comments as either positive or negati
 ## Key Features
 
 ✅ Preprocessed dataset with labeled sentiment (0 = Negative, 1 = Positive)  
-✅ Machine learning and deep learning approaches for text classification  
-✅ Data augmentation techniques to improve model performance  
-✅ Future predictions on real-time or batch text data 
+✅ Light weight deep learning approaches for faster inference 
+✅ Fast API integration for Inferences  
+✅ Streamlit UI for interactions
 
 ## Use Cases
 
