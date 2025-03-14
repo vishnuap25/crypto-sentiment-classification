@@ -3,16 +3,17 @@
 
 **Key Features**
 
-✅ Preprocessed dataset with labeled sentiment (0 = Negative, 1 = Positive)
-✅ Machine learning and deep learning approaches for text classification
-✅ Data augmentation techniques to improve model performance
-✅ Future predictions on real-time or batch text data
-
+✅ Preprocessed dataset with labeled sentiment (0 = Negative, 1 = Positive)  
+✅ Machine learning and deep learning approaches for text classification  
+✅ Data augmentation techniques to improve model performance  
+✅ Future predictions on real-time or batch text data 
 
 **Use Cases**
-📢 Social media sentiment analysis
-💬 Customer feedback classification
-⚠️ Automated content moderation
+
+📢 Social media sentiment analysis  
+💬 Customer feedback classification  
+⚠️ Automated content moderation  
+
 
 🔹 Tech Stack: Python, TensorFlow/PyTorch, NLP techniques
 🔹 Next Steps: Model optimization, real-time deployment**
