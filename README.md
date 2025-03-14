@@ -37,4 +37,14 @@ we can use the train.py module to train the data the data by using below command
 ```
 python3 train.py --input_file="/data/raw/crypto_currency_sentiment_dataset.csv" --output_dir="/models/model" --epochs=50 --batch_size=8
 ```
+## To Run and Inference  
+```
+docker build -t sentiment-inference .
+docker run -p 8000:8000 sentiment-inference
+```
 ## To Run and Inference below specified docker configurations can be used
+```
+docker build -t sentiment-inference .
+docker run -p 8000:8000 sentiment-inference
+```
+
