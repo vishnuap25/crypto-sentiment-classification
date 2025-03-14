@@ -42,6 +42,7 @@ python3 train.py --input_file="/data/raw/crypto_currency_sentiment_dataset.csv" 
 python3 -m uvicorn app:app --reload --host 0.0.0.0 --port 5000
 ```
 ![Project Screenshot](assets/sample_result.png)
+![Project Screenshot](assets/result2.png)
 ## To deploy to docker
 ```
 docker build -t sentiment-inference .
