@@ -6,20 +6,23 @@ import tensorflow as tf
 from sentence_transformers import SentenceTransformer
 
 # Initializations
+print("Initializing components....")
 app = FastAPI()
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-MODEL_PATH = os.path.join(BASE_DIR, "../models/model")
+MODEL_PATH = "/app/models/model"
 model = tf.saved_model.load(MODEL_PATH)
 encoder = SentenceTransformer('all-mpnet-base-v2')
 label_map = {1 : "Positive", 0: "Negative"}
 
+print("Server is ready for inferencing....")
 # Input Schema for API payload
 class TextInput(BaseModel):
     text: str
 
 # Predicting Endpoint
 @app.post("/predict/")
-def predict_sentiment(input_data: TextInput):
+def predict_sentiment(input_data: TextInput):   
+    print("Inferencing active....")
     encoded_ = encoder.encode([input_data.text])
     prediction_prob = model.signatures["serving_default"]\
         (tf.constant(encoded_))['output_0'][0][0]
