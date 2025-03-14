@@ -10,14 +10,22 @@ from sentence_transformers import SentenceTransformer
 
 
 def parse_arguments():
-    parser = argparse.ArgumentParser(description="Train a sentiment classification model for cryptocurrency comments.")
-    parser.add_argument("--input_file", type=str, required=True, help="Path to the input CSV file.")
-    parser.add_argument("--output_dir", type=str, required=True, help="Directory to save the trained model.")
-    parser.add_argument("--epochs", type=int, default=50, help="Number of training epochs.")
-    parser.add_argument("--batch_size", type=int, default=8, help="Batch size for training.")
-    parser.add_argument("--learning_rate", type=float, default=0.0001, help="Learning rate for Adam optimizer.")
-    parser.add_argument("--dropout", type=float, default=0.4, help="Dropout rate.")
-    parser.add_argument("--validation_split", type=float, default=0.2, help="Fraction of data to use for validation.")
+    parser = argparse.ArgumentParser(description=\
+        "Train a sentiment classification model for cryptocurrency comments.")
+    parser.add_argument("--input_file", \
+        type=str, required=True, help="Path to the input CSV file.")
+    parser.add_argument("--output_dir", \
+        type=str, required=True, help="Directory to save the trained model.")
+    parser.add_argument("--epochs", \
+        type=int, default=50, help="Number of training epochs.")
+    parser.add_argument("--batch_size", \
+        type=int, default=8, help="Batch size for training.")
+    parser.add_argument("--learning_rate", \
+        type=float, default=0.0001, help="Learning rate for Adam optimizer.")
+    parser.add_argument("--dropout", \
+        type=float, default=0.4, help="Dropout rate.")
+    parser.add_argument("--validation_split", \
+        type=float, default=0.2, help="Fraction of data to use for validation.")
     return parser.parse_args()
 
 
@@ -37,7 +45,8 @@ def build_model(dropout_rate, learning_rate):
         Dropout(dropout_rate),
         Dense(1, activation='sigmoid')
     ])
-    model.compile(optimizer=Adam(learning_rate=learning_rate), loss='binary_crossentropy', metrics=['accuracy'])
+    model.compile(optimizer=Adam(learning_rate=learning_rate),\
+                   loss='binary_crossentropy', metrics=['accuracy'])
     return model
 
 
@@ -51,11 +60,13 @@ def main():
     
     # Build Model
     model = build_model(args.dropout, args.learning_rate)
-    early_stop = EarlyStopping(monitor='val_loss', patience=3, restore_best_weights=True)
+    early_stop = EarlyStopping(monitor='val_loss', patience=3, \
+                               restore_best_weights=True)
     
     # Train Model
-    model.fit(X_encoded, y, epochs=args.epochs, batch_size=args.batch_size, 
-              validation_split=args.validation_split, callbacks=[early_stop], shuffle=True)
+    model.fit(X_encoded, y, epochs=args.epochs, batch_size=args.batch_size, \
+              validation_split=args.validation_split, \
+                callbacks=[early_stop], shuffle=True)
     
     # Save Model
     os.makedirs(args.output_dir, exist_ok=True)
