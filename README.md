@@ -1,5 +1,5 @@
 # crypto-sentiment-classification
-**This project focuses on classifying online comments as either positive or negative based on sentiment. Using a labeled dataset of past comments, the model learns sentiment patterns and predicts whether new, unseen text expresses a negative or positive sentiment.
+This project focuses on classifying online comments as either positive or negative based on sentiment. Using a labeled dataset of past comments, the model learns sentiment patterns and predicts whether new, unseen text expresses a negative or positive sentiment.
 
 **Key Features**
 
@@ -15,5 +15,5 @@
 ⚠️ Automated content moderation  
 
 
-🔹 Tech Stack: Python, TensorFlow/PyTorch, NLP techniques
-🔹 Next Steps: Model optimization, real-time deployment**
+🔹 Tech Stack: Python, TensorFlow/PyTorch, NLP techniques  
+🔹 Next Steps: Model optimization, real-time deployment
