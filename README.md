@@ -24,7 +24,7 @@ This model training is done with sample 562 records collected from Reddit. There
 [Click here to download the dataset](https://raw.githubusercontent.com/your-username/your-repo/main/data/dataset.csv)
 
 **Training the model**
-Used a sentance transformer "all-mpnet-base-v2" for encoding the text and a shallow neural network to perform the predictions  
+Used a sentance transformer "all-mpnet-base-v2" for encoding the text and a shallow neural network to perform the predictions.
 To train with your customer dataset can use csv file as in the below format  
 
 **sample data**  
