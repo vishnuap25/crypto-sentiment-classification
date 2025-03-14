@@ -20,7 +20,7 @@ This project focuses on classifying online comments as either positive or negati
 ## Data  
 This model training is done with sample 562 records collected from Reddit. There are 2 possible Sentiment Labels Positive/Negative  
 
-** 📥 Download Dataset**
+**📥 Download Dataset**
 [Click here to download the dataset](https://raw.githubusercontent.com/your-username/your-repo/main/data/dataset.csv)
 
 **Training the model**
