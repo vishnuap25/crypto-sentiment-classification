@@ -17,9 +17,17 @@ This project focuses on classifying online comments as either positive or negati
 
 🔹 Tech Stack: Python, TensorFlow, NLP techniques, FastApi for Realtime Inferencing
 
-**Sample Data**
+**Data**  
 This model training is done with sample 562 records collected from Reddit. There are 2 possible Sentiment Labels Positive/Negative  
 
 **📥 Download Dataset  
 [Click here to download the dataset](https://raw.githubusercontent.com/your-username/your-repo/main/data/dataset.csv)
 
+**Training the model**
+Used a sentance transformer "all-mpnet-base-v2" for encoding the text and a shallow neural network to perform the predictions  
+To train with your customer dataset can use csv file as input  
+
+sample  
+```Comment,Sentiment
+today was my luckey day, Positive
+all market fell today, Negative```
