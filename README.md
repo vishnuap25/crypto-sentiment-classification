@@ -25,9 +25,16 @@ This model training is done with sample 562 records collected from Reddit. There
 
 **Training the model**
 Used a sentance transformer "all-mpnet-base-v2" for encoding the text and a shallow neural network to perform the predictions  
-To train with your customer dataset can use csv file as input  
+To train with your customer dataset can use csv file as in the below format  
 
 sample  
-```Comment,Sentiment
+```
+Comment,Sentiment
 today was my luckey day, Positive
-all market fell today, Negative```
+all market fell today, Negative
+```
+we can use the train.py module to train the data the data by using below command and parameters:
+```
+python3 train.py --input_file="/data/raw/crypto_currency_sentiment_dataset.csv" --output_dir="/models/model" --epochs=50 --batch_size=8
+```
+**To Run and Inference below specified docker configurations can be used
